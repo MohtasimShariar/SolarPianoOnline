@@ -1,18 +1,31 @@
 *, *::before, *::after{
     box-sizing: border-box;
 }
+h1{
+  
+    display:block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+}
 
 body{
-    background-image: linear-gradient(to right, violet, indigo);
+    background-image: linear-gradient(to right, rgb(91, 8, 236), indigo);
     margin: 0px;
     min-height: 100vh;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
 }
 
 .piano{
     display: flex;
+    border: 5px solid black;
 }
 
 .key{
