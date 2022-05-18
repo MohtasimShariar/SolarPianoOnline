@@ -1,30 +1,31 @@
 *, *::before, *::after{
     box-sizing: border-box;
 }
-h1{
-  
-    display:block;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 24px;
-    font-style: italic;
-    color: rgb(255, 255, 255);
-}
 
 body{
     background-image: linear-gradient(to right, rgb(91, 8, 236), indigo);
-    margin: 0px;
-    min-height: 100vh;
+    margin: auto;
+    min-height: 80vh;
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
+}
+.header{
+    margin-left: 370px;
+    padding-bottom: 10px;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    font-weight: 700;
+    font-size: 34px;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
 }
 
 .piano{
     display: flex;
+    position: override;
     border: 5px solid black;
 }
 
@@ -58,4 +59,106 @@ body{
 
 .Black.active{
     background-color: #333;
+}
+@media screen and (max-width: 1000px){
+
+    body{
+        background-image: linear-gradient(rgb(91, 8, 236));
+        margin: auto;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+       
+        position: relative;
+    }
+    .header{
+        margin-left: 260px;
+        padding-bottom: 10px;
+        height: 60px;
+        display: flex;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        font-style: italic;
+        color: rgb(255, 255, 255);
+        text-transform: capitalize;
+    }
+    .piano{
+        display: flex;
+        border: 5px solid black;
+        justify-content: center;
+    }
+.key{
+    height: calc(var(--width) *2);
+    width: var(--width);
+    box-shadow: inset 0px 0px 0px black;
+}
+.White{
+    --width: 70px;
+    height: 280px;
+    background-color: white;
+    border: 1px solid #333;
+}
+.Black
+{
+    --width: 50px;
+    height: 200px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 1;
+    border: 1px solid #333;
+}
+}
+
+
+@media screen and (max-width: 750px){
+
+    body{
+        background-image: linear-gradient(rgb(91, 8, 236));
+        margin: auto;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+       
+        position: relative;
+    }
+    .header{
+        margin-left: 160px;
+        padding-bottom: 10px;
+        height: 60px;
+        display: flex;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        font-style: italic;
+        color: rgb(255, 255, 255);
+        text-transform: capitalize;
+    }
+    .piano{
+        display: flex;
+        border: 5px solid black;
+        justify-content: center;
+    }
+.key{
+    height: calc(var(--width) *2);
+    width: var(--width);
+    box-shadow: inset 0px 0px 0px black;
+}
+.White{
+    --width: 40px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid #333;
+}
+.Black
+{
+    --width: 30px;
+    height: 80px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 1;
+    border: 1px solid #333;
+}
 }
